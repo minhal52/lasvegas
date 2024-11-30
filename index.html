@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style></style>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-container">
+          <!-- Logo -->
+          <a href="#" class="navbar-logo">
+            <img src="assets/images/IMG_1.png" alt="Company Logo" class="navbar-logo-img" />
+          </a>
+    
+          <!-- Hamburger Menu -->
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+            ☰
+          </button>
+    
+          <!-- Navbar Links -->
+          <ul class="navbar-menu" id="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown" id="dropdown">
+              <a href="productlist.html" class="dropdown-toggle">All Products ▼</a> <!-- Direct link to productlist.html -->
+              <ul class="dropdown-menu">
+                <!-- <li><a href="productlist.html">All Products List</a></li> -->
+                <li><a href="combinationVM.html">Combination Vending Machine</a></li>
+                <li><a href="colddrinkVM.html">Cold Drink Vending Machine</a></li>
+                <li><a href="snack&candyVM.html">Snack & Candy Vending Machine</a></li>
+                <li><a href="hotdrinkcoffe.html">Hot Drink / Coffee Vending Machine</a></li>
+                <li><a href="retail-nonfooddrink.html">Retail (Non-Food / Drink) Vending Machine</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section hero">
+      <div class="section-content">
+        <div class="hero-details">
+          <h2 class="title">Spin the Wheel of <br />Convenience</h2>
+          <p class="description">
+            Experience the thrill of instant rewards! Spin the wheel and
+            discover amazing deals on your favorite snacks and beverages, all at
+            your fingertips. Convenient, fun, and rewarding — that's the vending
+            machine revolution!
+          </p>
+          <div class="buttons">
+            <a href="productlist.html" class="button order-now">Explore</a>
+            <a href="contact.html" class="button contact-now">Contact</a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img
+            src="assets/images/heroproductimage.jpg"
+            alt="product image"
+            class="hero-image"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- about -->
+    <section class="about-us">
+      <div class="about-us-container">
+        <div class="about-us-image">
+          <img src="assets/images/las vegas 3[1].png" alt="About Us Image" />
+        </div>
+        <div class="about-us-content">
+          <h2>About Us</h2>
+          <p>
+            Las Vegas vending machine company provides convenient, 24/7 access
+            to a wide range of snacks, drinks, and essential items in
+            high-traffic locations across the city. Catering to tourists,
+            locals, and businesses, the company focuses on offering quality
+            products, innovative machine designs, and reliable service in
+            vibrant environments.
+          </p>
+          <a href="about.html" class="read-more-btn">Read More</a>
+          <!-- Read More Button -->
+        </div>
+      </div>
+    </section>
+    <!-- FEATURED PRODUCT -->
+    <section class="product-slider">
+      <h1 class="slider-title">Featured Products</h1>
+      <div class="slider-container">
+        <button class="slider-btn prev-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="slider-wrapper">
+          <div class="slider-items">
+            <!-- Product 1 -->
+            <div class="product-card" id="product1">
+              <!-- <div class="discount-badge">Save 14%</div> -->
+              <img
+                src="assets/images/5-wide combination VM.png"
+                alt="5-Wide Combination Machine"
+                class="product-img"
+              />
+              <h2 class="product-name">5-Wide Combination Machine</h2>
+              <p class="product-price">
+                $7,504<span class="original-price"></span>
+              </p>
+              <div class="button-group">
+                <!-- View Details Button - Links to another page -->
+                <button class="btn view-details">
+                  <a
+                    href="combinationVM.html"
+                    style="color: inherit; text-decoration: none"
+                    >View product</a
+                  >
+                </button>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+              <!-- <div class="discount-badge">Save 11%</div> -->
+              <img
+                src="assets/images/outdoor combination VM.png"
+                alt="Outdoor Combination Machine"
+                class="product-img"
+              />
+              <h2 class="product-name">Outdoor Combination Machine</h2>
+              <p class="product-price">
+                $8,994<span class="original-price"></span>
+              </p>
+              <button class="btn view-details">
+                <a
+                  href="combinationVM.html"
+                  style="color: inherit; text-decoration: none"
+                  >View product</a
+                >
+              </button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+              <!-- <div class="discount-badge">Save 18%</div> -->
+              <img
+                src="assets/images/23 selection VM.png"
+                alt="Snack and Candy Machine"
+                class="product-img"
+              />
+              <h2 class="product-name">23 Selection Snack and Candy Machine</h2>
+              <p class="product-price">
+                $4,233<span class="original-price"></span>
+              </p>
+              <button class="btn view-details">
+                <a
+                  href="snack&candyVM.html"
+                  style="color: inherit; text-decoration: none"
+                  >View product</a
+                >
+              </button>
+            </div>
+            <!-- PRODUCT 4 -->
+            <div class="product-card">
+              <!-- <div class="discount-badge">Save 18%</div> -->
+              <img
+                src="assets/images/futura snack and drink vm.png"
+                alt="Snack and Candy Machine"
+                class="product-img"
+              />
+              <h2 class="product-name">
+                Futura Snack And Drink Combination Vending Machine
+              </h2>
+              <p class="product-price">
+                $4,233 <span class="original-price"></span>
+              </p>
+              <button class="btn view-details">
+                <a
+                  href="combinationVM.html"
+                  style="color: inherit; text-decoration: none"
+                  >View product</a
+                >
+              </button>
+            </div>
+
+            <!-- Product 5-->
+
+            <div class="product-card">
+              <!-- <div class="discount-badge">Save 15%</div> -->
+              <img
+                src="assets/images/Cold drink VM.png"
+                alt="Cold Drink Vending Machine"
+                class="product-img"
+              />
+              <h2 class="product-name">Cold Drink Vending Machine</h2>
+              <p class="product-price">
+                $6,174<span class="original-price"></span>
+              </p>
+              <button class="btn view-details">
+                <a
+                  href="colddrinkVM.html"
+                  style="color: inherit; text-decoration: none"
+                  >View product</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn next-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+     <!-- Contact Section -->
+<section class="contact-section">
+  <div class="contact-container">
+    <!-- Left Side: Contact Details -->
+    <div class="contact-details-wrapper">
+      <h2 class="section-title">Connect Us</h2>
+      <p class="contact-query-text">
+        Have a question about our products or services? Feel free to reach
+        out to us, and we'll be happy to assist you with any inquiry you
+        have!
+      </p>
+      <div class="contact-detail">
+        <i class="fas fa-map-marker-alt"></i>
+        <p class="detail-text">4985 N Chieftain st</p>
+      </div>
+      <div class="contact-detail">
+        <i class="fas fa-phone-alt"></i>
+        <p class="detail-text">702-862-6159</p>
+      </div>
+      <div class="contact-detail">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+
+    <!-- Right Side: Contact Form -->
+    <div class="contact-form-wrapper">
+      <form
+        action="mailto:Blanca@lasvegasvending.net"
+        method="GET"
+        class="contact-form"
+        onsubmit="return sendPrefilledEmail()"
+      >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+            rows="6"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="submit-btn">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+    <!-- scriptjs -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

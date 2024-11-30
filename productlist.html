@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Vending Machine Products</title>
+  <link rel="stylesheet" href="assets/css/productpage.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .vending-machine {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #414042;
+    }
+
+    /* Products Container */
+    .products-container {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(1, 1fr); /* Default for small screens */
+      justify-items: center;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .products-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+      }
+    }
+
+    @media (min-width: 992px) {
+      .products-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .products-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+      }
+    }
+
+    /* Product Card */
+    .product-card {
+      background-color: #ffffff;
+      width: 250px; /* Reduced width */
+      text-align: center;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Product Image */
+    .product-image {
+      width: 100%;
+      height: 300px; /* Reduced height */
+      object-fit: contain;
+    }
+
+    /* Product Name */
+    .product-name {
+      font-size: 1rem; /* Reduced font size */
+      margin: 10px 0;
+      color: #333;
+    }
+
+    /* Product Price */
+    .product-price {
+      font-size: 0.9rem; /* Reduced font size */
+      color: #414042;
+      font-weight: bold;
+    }
+
+    /* View Details Button */
+    .view-details {
+      text-decoration: none;
+      color: #fff;
+      background-color: #be1e2d;
+      padding: 6px 12px; /* Reduced padding */
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 0.8rem; /* Reduced font size */
+    }
+
+    .view-details:hover {
+      background-color: #ffffff;
+      color: #be1e2d;
+      border: 2px solid #be1e2d;
+    }
+
+    /* Media Queries for Specific Screen Sizes */
+
+    /* For Small Screens (Default) */
+    @media (max-width: 767px) {
+      .product-card {
+        width: 220px; /* Further reduce width for mobile */
+      }
+
+      .product-image {
+        height: 250px; /* Further reduce image height */
+      }
+
+      .product-name {
+        font-size: 0.9rem;
+      }
+
+      .product-price {
+        font-size: 0.8rem;
+      }
+
+      .view-details {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+      }
+    }
+
+    /* For Medium Screens */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .product-card {
+        width: 240px; /* Adjust width */
+      }
+
+      .product-image {
+        height: 280px;
+      }
+
+      .product-name {
+        font-size: 0.95rem;
+      }
+
+      .product-price {
+        font-size: 0.85rem;
+      }
+
+      .view-details {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+      }
+    }
+
+    /* For Large Screens */
+    @media (min-width: 992px) {
+      .product-card {
+        width: 250px;
+      }
+
+      .product-image {
+        height: 300px;
+      }
+
+      .product-name {
+        font-size: 1rem;
+      }
+
+      .product-price {
+        font-size: 0.9rem;
+      }
+
+      .view-details {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <a href="#" class="navbar-logo">
+          <img src="assets/images/IMG_1.png" alt="Company Logo" class="navbar-logo-img" />
+        </a>
+  
+        <!-- Hamburger Menu -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+          ☰
+        </button>
+  
+        <!-- Navbar Links -->
+        <ul class="navbar-menu" id="navbar-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown" id="dropdown">
+            <a href="productlist.html" class="dropdown-toggle">All Products ▼</a> <!-- Direct link to productlist.html -->
+            <ul class="dropdown-menu">
+              <!-- <li><a href="productlist.html">All Products List</a></li> -->
+              <li><a href="combinationVM.html">Combination Vending Machine</a></li>
+              <li><a href="colddrinkVM.html">Cold Drink Vending Machine</a></li>
+              <li><a href="snack&candyVM.html">Snack & Candy Vending Machine</a></li>
+              <li><a href="hotdrinkcoffe.html">Hot Drink / Coffee Vending Machine</a></li>
+              <li><a href="retail-nonfooddrink.html">Retail (Non-Food / Drink) Vending Machine</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="vending-machine">
+    <h1 class="section-title">Our Vending Machine Products</h1>
+    <div class="products-container"></div>
+  </section>
+
+  <script>
+    const products = [
+      {
+        id: "product1",
+        name: "Futura Snack & Drink Combination",
+        price: "$6084",
+        image: "assets/images/futura snack and drink vm.png",
+      },
+      {
+        id: "product2",
+        name: "Cold Drink Vending Machine",
+        price: "$6174",
+        image: "assets/images/Cold drink VM.png",
+      },
+      {
+        id: "product3",
+        name: "3-Wide Combination Vending Machine",
+        price: "$6941",
+        image: "assets/images/3-wide Vm.png",
+      },
+      {
+        id: "product4",
+        name: "23 Selection Snack and Candy Machine",
+        price: "$4223",
+        image: "assets/images/23 selection VM.png",
+      },
+      {
+        id: "product5",
+        name: "5-Wide Combination Vending Machine",
+        price: "$7504",
+        image: "assets/images/5-wide combination VM.png",
+      },
+      {
+        id: "product6",
+        name: "Outdoor Combination Vending Machine",
+        price: "$8994",
+        image: "assets/images/outdoor combination VM.png",
+      },
+      {
+        id: "product7",
+        name: "32 Selection Snack & Candy Vending Machine",
+        price: "$5338",
+        image: "assets/images/32 Selection Snack candy VM.png",
+      },
+      {
+        id: "product8",
+        name: "40 Selection Snack & Candy Vending Machine",
+        price: "$6415",
+        image: "assets/images/40 Selection snackcandy VM.png",
+      },
+      {
+        id: "product9",
+        name: "Frozen Food & Ice Cream Vending Machine",
+        price: "$9704",
+        image: "assets/images/Frozen food icecream Vm.png",
+      },
+      {
+        id: "product10",
+        name: "Cold Drink Elevator Vending Machine",
+        price: "$8838",
+        image: "assets/images/Colddrink elevatorVM.png",
+      },
+      {
+        id: "product11",
+        name: "Combination Elevator Vending Machine",
+        price: "$9071",
+        image: "assets/images/Combination Elevator VM.png",
+      },
+      {
+        id: "product12",
+        name: "Snack & Candy Vending Machine",
+        price: "$7414",
+        image: "assets/images/SNACKANDCANDYvM.png",
+      },
+      {
+        id: "product13",
+        name: "Coffee & Hot Drink Vending Machine",
+        price: "$10194",
+        image: "assets/images/cofee hotdrink VM.png",
+      },
+      {
+        id: "product14",
+        name: "20 Selection Laundromat Vending Machine",
+        price: "$5613",
+        image: "assets/images/20 selction LaundryVM.png",
+      },
+      {
+        id: "product15",
+        name: "Cigerate & Vape Vending Machine",
+        price: "$5566",
+        image: "assets/images/CIGRATEVAPEvm.png",
+      },
+      {
+        id: "product16",
+        name: "Self Storage Supply Vending Machine",
+        price: "$9297",
+        image: "assets/images/SelfstorageVm.png",
+      },
+     
+      {
+        id: "product17",
+        name: "Bowling Gear Vending Machine",
+        price: "$5566",
+        image: "assets/images/bowlinggearVM.png",
+      },
+      {
+        id: "product18",
+        name: "Safety Supply & PPE Equipment Vending Machine",
+        price: "$8051",
+        image: "assets/images/Safety Supply ppe VM.png",
+      },
+      {
+        id: "product19",
+        name: "SB16 Single Brew Coffee Pod Vending Machine",
+        price: "$8051",
+        image: "assets/images/SB16 singlebrew VM.png",
+      },
+      {
+        id: "product20",
+        name: "Triple Vend Gumball / Candy Machine",
+        price: "$8051",
+        image: "assets/images/triplegumballcandyVM.png",
+      },
+    ];
+
+
+  
+
+    const productsContainer = document.querySelector(".products-container");
+
+    products.forEach(product => {
+      const productCard = document.createElement("div");
+      productCard.classList.add("product-card");
+
+      productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="product-image">
+        <h3 class="product-name">${product.name}</h3>
+        <p class="product-price">${product.price}</p>
+        <a href="product-details.html?id=${product.id}" class="view-details">View Details</a>
+      `;
+
+      productsContainer.appendChild(productCard);
+    });
+  </script>
+
+  <!-- =========script====================== -->
+ <script src="assets/js/main.js"></script>
+</body>
+</html>

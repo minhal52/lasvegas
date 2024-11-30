@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Vending Machine Products</title>
+  <link rel="stylesheet" href="assets/css/productpage.css">
+  
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Logo -->
+        <a href="#" class="navbar-logo">
+          <img src="assets/images/IMG_1.png" alt="Company Logo" class="navbar-logo-img" />
+        </a>
+  
+        <!-- Hamburger Menu -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+          ☰
+        </button>
+  
+        <!-- Navbar Links -->
+        <ul class="navbar-menu" id="navbar-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown" id="dropdown">
+            <a href="productlist.html" class="dropdown-toggle">All Products ▼</a> <!-- Direct link to productlist.html -->
+            <ul class="dropdown-menu">
+              <!-- <li><a href="productlist.html">All Products List</a></li> -->
+              <li><a href="combinationVM.html">Combination Vending Machine</a></li>
+              <li><a href="colddrinkVM.html">Cold Drink Vending Machine</a></li>
+              <li><a href="snack&candyVM.html">Snack & Candy Vending Machine</a></li>
+              <li><a href="hotdrinkcoffe.html">Hot Drink / Coffee Vending Machine</a></li>
+              <li><a href="retail-nonfooddrink.html">Retail (Non-Food / Drink) Vending Machine</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <section class="vending-machine">
+    <h1 class="section-title">Our Vending Machine Products</h1>
+    <div class="products-container"></div>
+  </section>
+
+  <script>
+    const products = [
+     
+      {
+        id: "product13",
+        name: "Coffee & Hot Drink Vending Machine",
+        price: "$10194",
+        image: "assets/images/cofee hotdrink VM.png",
+      },
+    
+      {
+        id: "product19",
+        name: "SB16 Single Brew Coffee Pod Vending Machine",
+        price: "$8051",
+        image: "assets/images/SB16 singlebrew VM.png",
+      },
+  
+    ];
+
+
+  
+
+    const productsContainer = document.querySelector(".products-container");
+
+    products.forEach(product => {
+      const productCard = document.createElement("div");
+      productCard.classList.add("product-card");
+
+      productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="product-image">
+        <h3 class="product-name">${product.name}</h3>
+        <p class="product-price">${product.price}</p>
+        <a href="product-details.html?id=${product.id}" class="view-details">View Details</a>
+      `;
+
+      productsContainer.appendChild(productCard);
+    });
+  </script>
+ <!-- =========script====================== -->
+ <script src="assets/js/main.js"></script>
+</body>
+</html>
