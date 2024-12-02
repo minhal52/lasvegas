@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Las Vegas Vending Machines - Products</title>
+  <title>Las Vegas Vending Machine LLC - Products</title>
   <link rel="stylesheet" href="assets/css/productpage.css">
   <meta name="description" 
   content="Las Vegas Vending offers top-tier vending machine services, including snack and beverage vending, office solutions, rentals, and repairs. Providing custom vending solutions across Las Vegas.">
@@ -28,184 +28,7 @@
 
 <!-- Favicon -->
 <link rel="icon" href="assets/images/IMG_1.png" type="image/x-icon">
-  <style>
-    /* General Styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    .vending-machine {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #414042;
-    }
-
-    /* Products Container */
-    .products-container {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(1, 1fr); /* Default for small screens */
-      justify-items: center;
-      margin: 0 auto;
-    }
-
-    @media (min-width: 768px) {
-      .products-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
-      }
-    }
-
-    @media (min-width: 992px) {
-      .products-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-      }
-    }
-
-    @media (min-width: 1200px) {
-      .products-container {
-        grid-template-columns: repeat(4, 1fr); /* 4 items per row */
-      }
-    }
-
-    /* Product Card */
-    .product-card {
-      background-color: #ffffff;
-      width: 250px; /* Reduced width */
-      text-align: center;
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 8px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Product Image */
-    .product-image {
-      width: 100%;
-      height: 300px; /* Reduced height */
-      object-fit: contain;
-    }
-
-    /* Product Name */
-    .product-name {
-      font-size: 1rem; /* Reduced font size */
-      margin: 10px 0;
-      color: #333;
-    }
-
-    /* Product Price */
-    .product-price {
-      font-size: 0.9rem; /* Reduced font size */
-      color: #414042;
-      font-weight: bold;
-    }
-
-    /* View Details Button */
-    .view-details {
-      text-decoration: none;
-      color: #fff;
-      background-color: #be1e2d;
-      padding: 6px 12px; /* Reduced padding */
-      border-radius: 4px;
-      margin-top: 10px;
-      font-size: 0.8rem; /* Reduced font size */
-    }
-
-    .view-details:hover {
-      background-color: #ffffff;
-      color: #be1e2d;
-      border: 2px solid #be1e2d;
-    }
-
-    /* Media Queries for Specific Screen Sizes */
-
-    /* For Small Screens (Default) */
-    @media (max-width: 767px) {
-      .product-card {
-        width: 220px; /* Further reduce width for mobile */
-      }
-
-      .product-image {
-        height: 250px; /* Further reduce image height */
-      }
-
-      .product-name {
-        font-size: 0.9rem;
-      }
-
-      .product-price {
-        font-size: 0.8rem;
-      }
-
-      .view-details {
-        font-size: 0.7rem;
-        padding: 5px 10px;
-      }
-    }
-
-    /* For Medium Screens */
-    @media (min-width: 768px) and (max-width: 991px) {
-      .product-card {
-        width: 240px; /* Adjust width */
-      }
-
-      .product-image {
-        height: 280px;
-      }
-
-      .product-name {
-        font-size: 0.95rem;
-      }
-
-      .product-price {
-        font-size: 0.85rem;
-      }
-
-      .view-details {
-        font-size: 0.75rem;
-        padding: 6px 12px;
-      }
-    }
-
-    /* For Large Screens */
-    @media (min-width: 992px) {
-      .product-card {
-        width: 250px;
-      }
-
-      .product-image {
-        height: 300px;
-      }
-
-      .product-name {
-        font-size: 1rem;
-      }
-
-      .product-price {
-        font-size: 0.9rem;
-      }
-
-      .view-details {
-        font-size: 0.8rem;
-        padding: 6px 12px;
-      }
-    }
-  </style>
+ 
 </head>
 <body>
   <header>
@@ -246,7 +69,58 @@
     <h1 class="section-title">All Vending Machine Products</h1>
     <div class="products-container"></div>
   </section>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Logo Section -->
+    <div class="footer-logo">
+      <img src="assets/images/IMG_1.png" alt="Company Logo" />
+      <p class="footer-description">
+        Las Vegas Vending LLC.
+      </p>
+    </div>
 
+    <!-- Quick Links Section -->
+    <div class="footer-links">
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="footer-link-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div class="footer-contact">
+      <h3 class="footer-heading">Contact Us</h3>
+      <p>4985 N chieftain st</p>
+      <p>Email: lasvegasvending.net</p>
+      <p>Phone: 702-862-6159</p>
+
+      <!-- Social Icons -->
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 Las Vegas Vending LLC. All Rights Reserved.</p>
+  </div>
+</footer>
   <script>
     const products = [
       {

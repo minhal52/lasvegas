@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Las Vegas Vending Machines - About us</title>
+    <title>Las Vegas Vending Machine LLC - About us</title>
     <meta name="description" 
     content="Las Vegas Vending offers top-tier vending machine services, including snack and beverage vending, office solutions, rentals, and repairs. Providing custom vending solutions across Las Vegas.">
 <meta name="keywords" 
@@ -29,452 +29,7 @@
 <!-- Favicon -->
 <link rel="icon" href="assets/images/IMG_1.png" type="image/x-icon">
     <style>
- /* General Styling */
-.banner {
-    background-color: #333;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.banner h1 {
-    margin: 0;
-}
-
-.about-us {
-    background-color: #ffffff;
-}
-
-.about-us-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-us-image img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-}
-
-.about-us-content {
-    flex: 1;
-    padding-left: 40px;
-}
-
-.about-us h2 {
-    font-size: 44px;
-    margin-bottom: 20px;
-    color: #be1e2d;
-}
-
-.about-us p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #414042;
-}
-
-.read-more-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #be1e2d;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.read-more-btn:hover {
-    background-color: white;
-    border: 2px solid #be1e2d;
-    color: #be1e2d;
-}
-
-/* Responsive Styling for Smaller Screens */
-@media (max-width: 1024px) {
-    .about-us-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-us-image {
-        margin-bottom: 20px; /* Add spacing between image and content */
-    }
-
-    .about-us-content {
-        padding-left: 0;
-    }
-}
-.mission {
-    padding: 50px 20px;
-    background-color: #ffffff;
-}
-
-.mission-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.mission-content {
-    flex: 1;
-    padding-right: 40px;
-}
-
-.mission h2 {
-    font-size: 44px;
-    margin-bottom: 20px;
-    color: #be1e2d;
-}
-
-.mission p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #414042;
-}
-
-.mission-image img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-    mix-blend-mode: multiply;
-}
-
-/* Responsive Design for Small Screens */
-@media (max-width: 768px) {
-    .mission-container {
-        flex-direction: column; /* Stack image and content vertically */
-        text-align: center;    /* Center content for better visual appeal */
-    }
-
-    .mission-image img {
-        /* margin-bottom: 20px; Add spacing below the image */
-        mix-blend-mode: multiply;
-    }
-
-    .mission-content {
-        padding-right: 0; /* Remove padding on smaller screens */
-    }
-
-    .mission h2 {
-        font-size: 32px; /* Adjust heading size for smaller screens */
-    }
-
-    .mission p {
-        font-size: 16px; /* Adjust paragraph size for smaller screens */
-    }
-}
-/* ============================== */
-.product-images {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.product-images img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.product-images img:hover {
-    transform: scale(1.05);
-}
-
-/* Adjustments for Mobile and Tablet Screens */
-@media (max-width: 1024px) {
- .product-images {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-
-
-    .product-images {
-        grid-template-columns: 1fr;
-    }
-}
- /* Product Variants Section Styling */
- .product-variants {
-    /* padding: 50px; */
-    background-color: #ffffff;
-}
-
-.container1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap; /* Allow flex items to wrap on smaller screens */
-}
-
-/* Product Image Styling */
-.product-image img {
-    width: 350px;
-    height: auto;
-    border-radius: 8px;
-    mix-blend-mode: multiply;
-}
-
-/* Product Description Styling */
-.product-description {
-    flex: 1;
-    padding: 20px;
-    max-width: 600px;
-}
-
-/* Heading and Paragraph Styling */
-.product-description h3 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #be1e2d;
-}
-
-.product-description p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #414042;
-}
-
-.product-description ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.product-description ul li {
-    font-size: 16px;
-    color: #414042;
-    margin-bottom: 10px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 1024px) {
-    .container1 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-image img {
-        width: 80%; /* Adjust image size for mobile */
-        /* margin-bottom: 20px; Add spacing below images */
-    }
-
-    .product-description {
-        padding: 0;
-        text-align: center;
-    }
-}
-
-/* Mobile Smaller Screen */
-@media (max-width: 768px) {
-    .container1 {
-        flex-direction: column; /* Image on top, content below */
-    }
-
-    .product-image img {
-        width: 100%; /* Image takes full width on mobile */
-    }
-
-    .product-description h3 {
-        font-size: 28px; /* Adjust heading font size */
-    }
-
-    .product-description p {
-        font-size: 16px; /* Adjust paragraph font size */
-    }
-
-    .product-description ul li {
-        font-size: 14px; /* Adjust list font size */
-    }
-}
-
-/* Core Function Section Styling */
-.core-function {
-    /* padding: 50px; */
-    background-color: #ffffff;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap; /* Allow flex items to wrap on smaller screens */
-}
-
-/* Core Description Styling */
-.core-description {
-    flex: 1;
-    padding: 20px;
-    max-width: 600px;
-}
-
-/* Heading and Paragraph Styling */
-.core-description h3 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #be1e2d;
-}
-
-.core-description p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #414042;
-}
-
-.core-description ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.core-description ul li {
-    font-size: 16px;
-    color: #414042;
-    margin-bottom: 10px;
-}
-
-/* Core Image Styling */
-.core-image img {
-    width: auto;
-    height: 700px;
-    border-radius: 8px;
-    mix-blend-mode: multiply;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .core-description {
-        padding: 0;
-        text-align: center;
-    }
-
-    .core-image img {
-        width: auto; /* Adjust image size for mobile */
-        height: auto;
-        /* margin-bottom: 20px; Add spacing below images */
-        mix-blend-mode: multiply;
-    }
-
-    .core-description {
-        text-align: center;
-    }
-}
-
-/* Mobile Smaller Screen */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column-reverse; /* Reverses order: image goes above content */
-    }
-
-    .core-image img {
-        width: 100%; /* Image takes full width on mobile */
-    }
-
-    .core-description h3 {
-        font-size: 28px; /* Adjust heading font size */
-    }
-
-    .core-description p {
-        font-size: 16px; /* Adjust paragraph font size */
-    }
-
-    .core-description ul li {
-        font-size: 14px; /* Adjust list font size */
-    }
-}
-/* General Styling for the Product Gallery */
-.product-gallery {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.gallery-heading {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #be1e2d;
-    text-transform: uppercase;
-}
-
-/* Product Image Grid */
-.product-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Individual Product Item */
-.product-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Product Image Styling */
-.product-item img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-
-/* Product Name Styling */
-.product-name {
-    font-size: 16px;
-    color: #414042;
-    margin: 0;
-    text-align: center;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .gallery-heading {
-        font-size: 28px;
-    }
-
-    .product-name {
-        font-size: 14px;
-    }
-
-    .product-item {
-        padding: 15px;
-    }
-}
-
+ 
   </style>
 </head>
 <body>
@@ -530,6 +85,10 @@
                 the city. Catering to tourists, locals, and businesses, the company focuses on
                 offering quality products, innovative machine designs, and reliable service in
                 vibrant environments.</p>
+                <p>At Las Vegas Vending we bring the convenience and innovation of modern vending machines to the heart of Las Vegas. Our state-of-the-art machines offer a wide variety of snacks, drinks, and everyday essentials, strategically placed in high-traffic locations across the city to serve both locals and visitors alike. Whether you're at a bustling hotel, an office building, or an entertainment venue, we provide fast, reliable access to quality products—whenever you need them.
+                    We pride ourselves on using the latest technology to ensure a seamless experience, from contactless payments to real-time inventory tracking. Our goal is simple: to make your day easier, one snack at a time.
+                    Explore the convenience and variety that Las Vegas Vending offers—your go-to vending partner in Las Vegas.
+                    </p>
             <!-- <a href="#" class="read-more-btn">Read More</a> Read More Button -->
         </div>
     </div>
@@ -594,27 +153,114 @@
         <div class="product-item">
             <img src="assets/images/5-wide combination VM.png" alt="5-Wide Combination VM">
             <p class="product-name">5-Wide Combination Vending Machine</p>
+            <br>
+            <button class="btn view-details">
+                <a
+                  href="productlist.html"
+                  style="color: inherit; text-decoration: none"
+                  >View product</a
+                >
         </div>
+        
         <div class="product-item">
             <img src="assets/images/40 Selection snackcandy VM.png" alt="40 Selection Snack/Candy VM">
             <p class="product-name">40 Selection Snack/Candy Vending Machine</p>
+            <br>
+            <button class="btn view-details">
+                <a
+                  href="productlist.html"
+                  style="color: inherit; text-decoration: none"
+                  >View product</a
+                >
         </div>
         <div class="product-item">
             <img src="assets/images/32 Selection Snack candy VM.png" alt="32 Selection Snack/Candy VM">
             <p class="product-name">32 Selection Snack/Candy Vending Machine</p>
+            <br>
+            <button class="btn view-details">
+                <a
+                  href="productlist.html"
+                  style="color: inherit; text-decoration: none"
+                  >View product</a
+                >
         </div>
         <div class="product-item">
             <img src="assets/images/Frozen food icecream Vm.png" alt="Frozen Food/Ice Cream VM">
             <p class="product-name">Frozen Food/Ice Cream Vending Machine</p>
+            <br>
+            <button class="btn view-details">
+                <a
+                  href="productlist.html"
+                  style="color: inherit; text-decoration: none"
+                  >View product</a
+                >
         </div>
         <div class="product-item">
             <img src="assets/images/Combination Elevator VM.png" alt="Combination Elevator VM">
             <p class="product-name">Combination Elevator Vending Machine</p>
+            <br>
+            <button class="btn view-details">
+                <a
+                  href="productlist.html"
+                  style="color: inherit; text-decoration: none"
+                  >View product</a
+                >
         </div>
     </div>
 </section>
 
-
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Logo Section -->
+      <div class="footer-logo">
+        <img src="assets/images/IMG_1.png" alt="Company Logo" />
+        <p class="footer-description">
+          Las Vegas Vending LLC.
+        </p>
+      </div>
+  
+      <!-- Quick Links Section -->
+      <div class="footer-links">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul class="footer-link-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Information Section -->
+      <div class="footer-contact">
+        <h3 class="footer-heading">Contact Us</h3>
+        <p>4985 N chieftain st</p>
+        <p>Email: lasvegasvending.net</p>
+        <p>Phone: 702-862-6159</p>
+  
+        <!-- Social Icons -->
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Las Vegas Vending LLC. All Rights Reserved.</p>
+    </div>
+  </footer>
 <!-- =========script====================== -->
  <script src="assets/js/main.js"></script>
 </body>
