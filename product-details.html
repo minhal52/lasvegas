@@ -89,20 +89,20 @@
       text-align: justify;
     }
 
-    .go-back-btn {
-      padding: 10px 20px;
-      background-color: #be1e2d;
-      color: white;
-      border: none;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
+    .go-back-btn, .get-quote-btn {
+        padding: 10px 20px;
+        background-color: #be1e2d; /* Red background */
+        color: white;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
     }
 
-    .go-back-btn:hover {
-      background-color: #ffffff;
-      color: #be1e2d;
-      border: 2px solid #be1e2d;
+    .go-back-btn:hover, .get-quote-btn:hover {
+        background-color: #ffffff; /* White background */
+        color: #be1e2d; /* Red text */
+        border: 2px solid #be1e2d; /* Red border */
     }
 
     /* Responsive Design */
@@ -189,8 +189,13 @@
       <h1 class="product-title" id="product-title"></h1>
       <p class="product-price" id="product-price"></p>
       <p class="product-description" id="product-description"></p>
+      
+      <!-- Go Back Button -->
       <a href="productlist.html" class="go-back-btn">Go Back to Products</a>
-    </div>
+      
+      <!-- Get Quote Button -->
+      <a href="mailto:lasvegasvending.net?subject=Product Query&body=Hello, I have a query about your product." class="get-quote-btn">Get Quote</a>
+  </div>
   </div>
 <!-- Footer Section -->
 <footer class="footer">
