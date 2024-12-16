@@ -63,36 +63,9 @@
           <ul class="navbar-menu" id="navbar-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li class="dropdown" id="dropdown">
-              <a href="productlist.html" class="dropdown-toggle"
-                >All Products ▼</a
-              >
-              <!-- Direct link to productlist.html -->
-              <ul class="dropdown-menu">
-                <!-- <li><a href="productlist.html">All Products List</a></li> -->
-                <li>
-                  <a href="combinationVM.html">Combination Vending Machine</a>
-                </li>
-                <li>
-                  <a href="colddrinkVM.html">Cold Drink Vending Machine</a>
-                </li>
-                <li>
-                  <a href="snack&candyVM.html">Snack & Candy Vending Machine</a>
-                </li>
-                <li>
-                  <a href="hotdrinkcoffe.html"
-                    >Hot Drink / Coffee Vending Machine</a
-                  >
-                </li>
-                <li>
-                  <a href="retail-nonfooddrink.html"
-                    >Retail (Non-Food / Drink) Vending Machine</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="productlist.html">All Products</a></li>
+  <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -136,13 +109,49 @@
             high-traffic locations across the city. Catering to tourists,
             locals, and businesses, the company focuses on offering quality
             products, innovative machine designs, and reliable service in
-            vibrant environments.
+            vibrant environments. All our vending machines are proudly made in the USA.
           </p>
+          
           <a href="about.html" class="read-more-btn">Read More</a>
           <!-- Read More Button -->
         </div>
       </div>
     </section>
+        <!-- services -->
+        <section class="service-section">
+          <h2 class="service-title">Our Services</h2>
+          <div class="service-container">
+            <!-- Service 1 -->
+            <div class="service-card">
+              <div class="service-icon"><i class="fas fa-box"></i></div>
+              <div class="service-content">
+                <h3>Vending Machine Supply and Installation</h3>
+                <p>We provide and install various types of vending machines, such as snack machines, beverage dispensers, or specialized options like healthy food or coffee machines.</p>
+              </div>
+            </div>
+      
+            <!-- Service 2 -->
+            <div class="service-card">
+              <div class="service-icon"><i class="fas fa-boxes"></i></div>
+              <div class="service-content">
+                <h3>Product Selection and Restocking</h3>
+                <p>We manage product inventory, selecting appropriate items based on location and customer preferences, and restocking machines regularly to ensure availability.</p>
+              </div>
+            </div>
+      
+            <!-- Service 3 -->
+            <div class="service-card">
+              <div class="service-icon"><i class="fas fa-credit-card"></i></div>
+              <div class="service-content">
+                <h3>Cash and Cashless Payment Solutions</h3>
+                <p>We provide machines that accept both cash and digital payments (credit/debit cards, mobile wallets, etc.) for convenience.</p>
+              </div>
+            </div>
+            </div>
+             <!-- View More Button -->
+  <a href="services.html" class="view-more">Explore Services</a>
+</section>
+
     <!-- FEATURED PRODUCT -->
     <section class="product-slider">
       <h1 class="slider-title">Featured Products</h1>
@@ -225,7 +234,7 @@
                 class="product-img"
               />
               <h2 class="product-name">
-                Futura Snack And Drink Combination Vending Machine
+                Snack And Drink Combination Vending Machine
               </h2>
               <p class="product-price">
                 <!-- $4,233 <span class="original-price"></span> -->
@@ -267,6 +276,8 @@
         </button>
       </div>
     </section>
+
+
     <!-- Contact Section -->
     <section class="contact-section">
       <div class="contact-container">
@@ -278,10 +289,10 @@
             out to us, and we'll be happy to assist you with any inquiry you
             have!
           </p>
-          <div class="contact-detail">
+          <!-- <div class="contact-detail">
             <i class="fas fa-map-marker-alt"></i>
             <p class="detail-text">4985 N Chieftain st</p>
-          </div>
+          </div> -->
           <div class="contact-detail">
             <i class="fas fa-phone-alt"></i>
             <p class="detail-text">702-862-6159</p>
@@ -363,9 +374,9 @@
     <!-- Contact Information Section -->
     <div class="footer-contact">
       <h3 class="footer-heading">Contact Us</h3>
-      <p>4985 N chieftain st</p>
-      <p>Email: lasvegasvending.net</p>
-      <p>Phone: 702-862-6159</p>
+      <p>Email: <a href="mailto:Blanca@lasvegasvending.net">Blanca@lasvegasvending.net</a></p>
+      <p>Phone: <a href="tel:+17028626159">702-862-6159</a></p>
+      
 
       <!-- Social Icons -->
       <div class="footer-social">
@@ -390,6 +401,70 @@
     <p>&copy; 2024 Las Vegas Vending LLC. All Rights Reserved.</p>
   </div>
 </footer>
+<script>
+  // FEATURED PRODUCT SLIDER
+  const sliderItems = document.querySelector('.slider-items');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  
+  let currentIndex = 1; // Start from the first actual item
+  const totalItems = sliderItems.children.length;
+  
+  // Clone the first and last elements for looping
+  const cloneStart = sliderItems.children[0].cloneNode(true);
+  const cloneEnd = sliderItems.children[totalItems - 1].cloneNode(true);
+  
+  sliderItems.appendChild(cloneStart); // Add a clone of the first item at the end
+  sliderItems.insertBefore(cloneEnd, sliderItems.firstChild); // Add a clone of the last item at the beginning
+  
+  const slideWidth = sliderItems.children[0].clientWidth;
+  
+  // Adjust initial position to show the first actual item
+  sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  
+  // Function to update the slider's position
+  const updateSlider = () => {
+    sliderItems.style.transition = 'transform 0.5s ease-in-out';
+    sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  };
+  
+  // Handle "Next" button click
+  nextBtn.addEventListener('click', () => {
+    currentIndex++;
+    updateSlider();
+  
+    // Reset to the first item when reaching the clone of the first item
+    if (currentIndex === totalItems - 1) {
+      setTimeout(() => {
+        sliderItems.style.transition = 'none';
+        currentIndex = 1; // Jump back to the first actual item
+        sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }, 500); // Matches the transition duration
+    }
+  });
+  
+  // Handle "Previous" button click
+  prevBtn.addEventListener('click', () => {
+    currentIndex--;
+    updateSlider();
+  
+    // Reset to the last item when reaching the clone of the last item
+    if (currentIndex === 0) {
+      setTimeout(() => {
+        sliderItems.style.transition = 'none';
+        currentIndex = totalItems - 2; // Jump back to the last actual item
+        sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }, 500); // Matches the transition duration
+    }
+  });
+  
+  // Adjust the slider on window resize
+  window.addEventListener('resize', () => {
+    const newSlideWidth = sliderItems.children[0].clientWidth;
+    sliderItems.style.transition = 'none'; // Temporarily disable transitions
+    sliderItems.style.transform = `translateX(-${currentIndex * newSlideWidth}px)`;
+  });
+  </script>
     <!-- scriptjs -->
     <script src="assets/js/main.js"></script>
   </body>

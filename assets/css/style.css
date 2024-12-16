@@ -1163,7 +1163,11 @@ mix-blend-mode: multiply;
   font-size: 18px;
   color: #333;
 }
-
+.contact-detail p a{
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
 /* Social Icons */
 .contact-detail i.fab {
   font-size: 26px;
@@ -1302,6 +1306,12 @@ mix-blend-mode: multiply;
   margin: 5px 0;
 }
 
+.footer-contact p a{
+  margin: 5px 0;
+  text-decoration: none;
+  font-size: 16px;
+  color: #414042;
+}
 .footer-social {
   margin-top: 15px;
 }
@@ -1380,3 +1390,131 @@ mix-blend-mode: multiply;
 }
 
 
+/* SERVICE PAGE */
+.service-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #FAF9F6;
+}
+
+.service-title {
+  font-size: 44px;
+  margin-bottom: 30px;
+  color: #be1e2d;
+}
+/* Service container grid */
+.service-container {
+display: grid;
+gap: 20px; /* Adds space between the cards */
+justify-content: center; /* Ensures the grid is centered */
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid with a minimum column width */
+margin-bottom: 40px; /* Adds margin space below the entire container */
+}
+
+/* Adjusted service card */
+.service-card {
+background: #FAF9F6;
+border: 1px solid #ddd;
+border-radius: 8px;
+padding: 20px; /* Padding inside the card */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s;
+display: flex;
+margin: 20px 20px;
+flex-direction: column;
+justify-content: flex-start; /* Ensures content is aligned to the top */
+align-items: center; /* Centers content horizontally */
+height: 80%; /* Ensures all cards have equal height */
+margin-bottom: 30px; /* Adds space below each card */
+}
+
+.service-card:hover {
+transform: translateY(-5px);
+}
+
+
+/* Service icon */
+.service-icon {
+  font-size: 2.5rem; /* Slightly smaller icon */
+  color: #be1e2d;
+  margin-bottom: 8px; /* Reduced space below the icon */
+  display: inline-block;
+}
+
+/* Service content paragraph */
+.service-content p {
+font-size: 1rem;
+color: #414042;
+line-height: 1.6; /* Ensures proper line spacing */
+margin: 0; /* Removes unnecessary default margins */
+text-align:center; /* Aligns the text to the left */
+width: 90%; /* Ensures content width is consistent */
+word-wrap: break-word; /* Breaks long words to prevent overflow */
+}
+
+
+.service-content h3 {
+  font-size: 1.1rem;
+  color: #414042;
+  margin-bottom: 5px; /* Minimized space below heading */
+}
+
+.service-content p {
+  font-size: 1rem;
+  color: #414042;
+  line-height: 1.6;
+  margin: 0; /* Removed unnecessary margin */
+  text-align: center; /* Ensure text inside p is centered */
+}
+
+.view-more {
+  margin: 10px auto; /* Centers the button horizontally */
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #ece175;
+  background-color: #be1e2d;
+  border: none;
+  border-radius: 25px;
+  width: 10%;
+  text-align: center; /* Centers the button text */
+  text-decoration: none;
+  display: block; /* Ensures the margin auto works */
+  transition: background-color 0.3s;
+}
+
+.view-more:hover {
+  background-color: #FAF9F6;
+  border: 2px solid #be1e2d;
+  color: #be1e2d;
+}
+
+/* Responsive grid layout */
+@media (min-width: 992px) {
+  .service-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+    gap: 20px; /* Gap between cards on large screens */
+  }
+  
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .service-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet screens */
+    gap: 20px; /* Increased gap between cards for tablet screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .service-container {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+    gap: 20px; /* Added gap between cards on mobile */
+  }
+}/* View More button for mobile screens */
+@media (max-width: 767px) {
+  .view-more {
+    width: 60%; /* Makes the button wider on mobile screens */
+    font-size: 0.9rem; /* Adjust font size for mobile */
+    padding: 12px 25px; /* Slightly increased padding for mobile */
+    border-radius: 20px; /* Makes the button's corners more rounded on mobile */
+  }
+}

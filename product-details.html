@@ -76,11 +76,11 @@
       color: #414042;
     }
 
-    .product-price {
+    /* .product-price {
       font-size: 1.5rem;
       margin: 10px 0;
       color: #414042;
-    }
+    } */
 
     .product-description {
       font-size: 1rem;
@@ -153,31 +153,25 @@
       <div class="navbar-container">
         <!-- Logo -->
         <a href="#" class="navbar-logo">
-          <img src="assets/images/IMG_1.png" alt="Company Logo" class="navbar-logo-img" />
+          <img
+            src="assets/images/IMG_1.png"
+            alt="Company Logo"
+            class="navbar-logo-img"
+          />
         </a>
-  
+
         <!-- Hamburger Menu -->
         <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
           ☰
         </button>
-  
+
         <!-- Navbar Links -->
         <ul class="navbar-menu" id="navbar-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li class="dropdown" id="dropdown">
-            <a href="productlist.html" class="dropdown-toggle">All Products ▼</a> <!-- Direct link to productlist.html -->
-            <ul class="dropdown-menu">
-              <!-- <li><a href="productlist.html">All Products List</a></li> -->
-              <li><a href="combinationVM.html">Combination Vending Machine</a></li>
-              <li><a href="colddrinkVM.html">Cold Drink Vending Machine</a></li>
-              <li><a href="snack&candyVM.html">Snack & Candy Vending Machine</a></li>
-              <li><a href="hotdrinkcoffe.html">Hot Drink / Coffee Vending Machine</a></li>
-              <li><a href="retail-nonfooddrink.html">Retail (Non-Food / Drink) Vending Machine</a></li>
-            </ul>
-          </li>
-       
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="productlist.html">All Products</a></li>
+<li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -223,9 +217,9 @@
     <!-- Contact Information Section -->
     <div class="footer-contact">
       <h3 class="footer-heading">Contact Us</h3>
-      <p>4985 N chieftain st</p>
-      <p>Email: lasvegasvending.net</p>
-      <p>Phone: 702-862-6159</p>
+      <p>Email: <a href="mailto:Blanca@lasvegasvending.net">Blanca@lasvegasvending.net</a></p>
+      <p>Phone: <a href="tel:+17028626159">702-862-6159</a></p>
+      
 
       <!-- Social Icons -->
       <div class="footer-social">
@@ -252,28 +246,35 @@
 </footer>
   <script>
     // List of products (this can be replaced with a dynamic backend API)
-    const products = [
-      {
-        id: "product1",
-        name: "Futura Snack & Drink Combination",
-        // price: "$6084",
-        image: "assets/images/futura snack and drink vm.png",
-        description: `
-          <p>The Top-Notch Las Vegas Vending Experience</p>
-          <p><strong>Product Details</strong></p>
-          <p>An ideal addition to your existing vending business or your first machine, the popular Futura Snack and Drink Combination Vending Machine is packed with cool features while offering a huge selection of drinks and candy/snacks in a space-saving footprint. Made in the U.S.A., the Futura Combo Snack and Drink Vending Machine is ADA Compliant and features a cost-saving, energy-efficient design with eco-friendly LED lighting. This snack and soda vending machine features an industry-best 5-Year Parts Warranty, as well as complimentary lifetime, virtual technical support.</p>
-          <p>eVending’s Futura Snack and Drink Combination Vending Machine has two separate compartments: one to hold cold beverages and another to hold snacks. Purchase this snack and drink vending machine today!</p>
-          <p><strong>Cold Drinks:</strong></p>
-          <ul>
-            <li>You can vend nine different 8oz cans or up to 20oz bottles in the refrigerated portion of the machine.</li>
-            <li>The total drink capacity is 136 beverages.</li>
-          </ul>
-          <p><strong>Snacks:</strong></p>
-          <ul>
-            <li>You can vend 20 different snack, candy, healthy treat, and pastry selections in the non-refrigerated portion of the vending machine.</li>
-            <li>The total candy and snack capacity is 217 items.</li>
-          </ul>`
-      },
+  const products = [
+  {
+    id: "product1",
+    name: "Snack & Drink Combination",
+    // price: "$6084",
+    image: "assets/images/futura snack and drink vm.png",
+    description: `
+      <ul>
+        <p><strong>The Top-Notch Las Vegas Vending Experience</strong></p>
+        <p><strong>Product Details:</strong> </p>
+      <li>An ideal addition to your existing vending business or your first machine, the popular Snack and Drink Combination Vending Machine is packed with cool features while offering a huge selection of drinks and candy/snacks in a space-saving footprint.</li>
+        <li>Made in the U.S.A., the Combo Snack and Drink Vending Machine is a cost-saving, energy-efficient design with eco-friendly LED lighting.</li>
+        <li>This snack and soda vending machine features an industry-best 5-Year Parts Warranty.</li>
+        <li>Las Vegas Vending Snack and Drink Combination Vending Machine has two separate compartments: one to hold cold beverages and another to hold snacks.</li></ul>
+        <p><strong>Cold Drinks:</strong></p>
+        <ul>
+          <li>You can vend nine different 8oz cans or up to 20oz bottles in the refrigerated portion of the machine.</li>
+          <li>The total drink capacity is 136 beverages.</li>
+        </ul>
+        <p><strong>Snacks:</strong></p>
+        <ul>
+          <li>You can vend 20 different snack, candy, healthy treat, and pastry selections in the non-refrigerated portion of the vending machine.</li>
+          <li>The total candy and snack capacity is 217 items.</li>
+        </ul>
+  <br>
+
+    `
+  },
+
       {
         id: "product2",
         name: "Cold Drink Vending Machine",
@@ -281,7 +282,15 @@
         image: "assets/images/Cold drink VM.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p> eVending’s Cold Drink Vending Machines offers ten (10) selections of your customers’ favorite national brand canned and bottled beverages. It vends most beverage containers on the market, including 12 ounce cans, 20 ounce, and 24 ounce bottles, and even 16 ounce bottled water. A bright eye-catching back-lit graphic sign and lighted product display draws in the customers. Energy saving LED lighting enhances product presentation promoting more sales, and its guaranteed delivery sensor system keeps customers satisfied. Purchase this small drink vending machine online!</p>
+          <ul>
+        <li>Offers ten (10) selections of your customers’ favorite national brand canned and bottled beverages.</li>
+        <li>Vends most beverage containers on the market, including 12-ounce cans, 20-ounce, and 24-ounce bottles, and even 16-ounce bottled water.</li>
+        <li>Features a bright, eye-catching back-lit graphic sign and lighted product display to attract customers.</li>
+        <li>Energy-saving LED lighting enhances product presentation and promotes more sales.</li>
+        <li>Includes a guaranteed delivery sensor system to keep customers satisfied.</li>
+        <li>Purchase this small drink vending machine online!</li>
+      </ul>
+      <br>
         `},
       {
         id: "product3",
@@ -290,9 +299,16 @@
         image: "assets/images/3-wide Vm.png",
          description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p>The 3-Wide Combination Vending Machine features a small footprint but packs a punch with its sleek design and style. It has the capability of vending cold food and drinks of various package sizes and form factors, all in one machine.</p>
-         <p>This refrigerated combo vending machine is available in two configurations. Vend refrigerated foods and cold drinks, or vend cold drinks and ambient snacks - you get to decide!  </p> 
-         <p>This refrigerated vending machine is fully compliant with the American Disabilities Act (ADA). But that's not all; it also includes top-notch features such as enhanced LED lighting and iVend technology, which guarantees the delivery of your preferred product. Even if the first attempt fails, the customer can try again or choose another item. Also, it is Health Safety compliant with its temperature sensing technology to prevent the sale of perishable food if the air temperature inside the food vendor compartment rises above the Health Safety temperature limit for more than 15 minutes. </p> `
+        <ul>
+  <li>The 3-Wide Combination Vending Machine features a small footprint but packs a punch with its sleek design and style.</li>
+  <li>It has the capability of vending cold food and drinks of various package sizes and form factors, all in one machine.</li>
+  <li>This refrigerated combo vending machine is available in two configurations: vend refrigerated foods and cold drinks, or vend cold drinks and ambient snacks - you get to decide!</li>
+  <li>It includes enhanced LED lighting for improved product presentation.</li>
+  <li>iVend technology guarantees the delivery of your preferred product, allowing customers to try again or choose another item if the first attempt fails.</li>
+  <li>It is Health Safety compliant with temperature sensing technology to prevent the sale of perishable food if the air temperature inside the food vendor compartment rises above the Health Safety temperature limit for more than 15 minutes.</li>
+</ul>
+<br>
+`
       },
       {
         id: "product4",
@@ -301,8 +317,15 @@
         image: "assets/images/23 selection VM.png",
       description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p>The 23 Selection Snack and Candy Vending Machine is your flexible and affordable snack machine option making it the ideal choice for seasoned vending operators and first vending machine owners. With LED lit product display, built-in security, and quality construction, this sweets vending machine will surely please and provide you with years of reliable service. </p>
-         <p>With a total capacity of 316 items (118 snacks and pastries, 198 candy and confections), offer your customers twenty-three (23) different selections of chips, candy, gum, mints, and pastries. The five (5) pull-out tilt trays are designed to make loading a breeze. The Snack and Candy Vending Machine features adjustable flex trays that can be easily configured to fit almost any package size, giving you more freedom for your snack selections. </p>`
+        <ul>
+  <li>The 23 Selection Snack and Candy Vending Machine is a flexible and affordable snack machine option, making it ideal for both seasoned vending operators and first-time vending machine owners.</li>
+  <li>Features LED-lit product display, built-in security, and quality construction to ensure years of reliable service.</li>
+  <li>Total capacity of 316 items: 118 snacks and pastries, and 198 candy and confections.</li>
+  <li>Offers customers twenty-three (23) different selections of chips, candy, gum, mints, and pastries.</li>
+  <li>Includes five (5) pull-out tilt trays designed to make loading easy and convenient.</li>
+  <li>Adjustable flex trays can be easily configured to fit almost any package size, providing more freedom for snack selections.</li>
+</ul>
+<br>`
 
       },
       {
@@ -312,8 +335,18 @@
         image: "assets/images/5-wide combination VM.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p> Looking for a vending machine that can handle high traffic and offer a wide selection of items? Look no further than the 5-Wide Combination Vending Machine! With a total capacity of 280 items and 42 different selections to choose from, this sleek and stylish machine can dispense a variety of cold food and drink options in different package sizes and form factors. Choose between two configurations to vend cold drinks and ambient snacks or refrigerated foods and drinks - all from one convenient machine!</p>
-         <p> This vending machine is designed to comply fully with the American Disabilities Act (ADA). But that's not all - it boasts a range of impressive features, such as enhanced LED lighting and iVend technology, which ensures that you receive your desired product. Even if the first attempt doesn't succeed, customers can try again or select an alternative item. Additionally, it is Health Safety compliant, with temperature sensing technology that prevents the sale of perishable food if the temperature inside the food vending compartment exceeds the Health Safety temperature limit for more than 15 minutes. </p>`
+       <ul>
+  <li>Handles high traffic and offers a wide selection of items.</li>
+  <li>Total capacity of 280 items and 42 different selections to choose from.</li>
+  <li>Dispenses a variety of cold food and drink options in different package sizes and form factors.</li>
+  <li>Offers two configurations: cold drinks and ambient snacks or refrigerated foods and drinks - all from one convenient machine.</li>
+  <li>Designed to comply fully with the American Disabilities Act (ADA).</li>
+  <li>Features enhanced LED lighting for better product visibility.</li>
+  <li>Includes iVend technology, ensuring product delivery even if the first attempt fails, allowing customers to try again or select an alternative item.</li>
+  <li>Health Safety compliant with temperature sensing technology to prevent the sale of perishable food if the internal temperature exceeds the Health Safety limit for more than 15 minutes.</li>
+</ul>
+<br>
+`
          
 
       },
@@ -324,9 +357,19 @@
         image: "assets/images/outdoor combination VM.png",
      description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p> With maximum durability that can withstand the elements, the Outdoor Snack and Drink Combination Vending Machine gives your customers the vending experience they have been craving. It features Rain guards, anti-pry covers, and an impact-resistant polycarbonate window cover with a steel frame to protect the merchandiser and the products inside.</p>
-         <p>The Outdoor Snack and Drink Combination Vending Machine is designed to offer a wide range of products while protecting them from outdoor weather conditions.  This machine has a capacity of 376 items, including 100 snacks, 168 candy, and 108 drink items. It is Health Safety compliant with its temperature sensing technology to prevent the sale of perishable food if the air temperature inside the food vendor compartment rises above the Health Safety temperature limit for more than 15 minutes. </p>
-         <p>It comes equipped with the latest electronic controls, an electronic coin changer and bill acceptor, and our guaranteed vend sensing technology. This outdoor snack and drink vending machine is extremely versatile and secure, making it the best rated outdoor snack machine on the market. </p> `
+        <ul>
+  <li>The Outdoor Snack and Drink Combination Vending Machine is built with maximum durability to withstand outdoor elements.</li>
+  <li>Features rain guards, anti-pry covers, and an impact-resistant polycarbonate window cover with a steel frame to protect the merchandiser and products inside.</li>
+  <li>Designed to offer a wide range of products while protecting them from outdoor weather conditions.</li>
+  <li> It has total capacity of 376 items, including 100 snacks, 168 candy items, and 108 drink items.</li>
+  <li>Health Safety compliant with temperature sensing technology to prevent the sale of perishable food if the air temperature inside the food vendor compartment exceeds the Health Safety temperature limit for more than 15 minutes.</li>
+  <li>Equipped with the latest electronic controls for easy operation.</li>
+  <li>Includes an electronic coin changer and bill acceptor for seamless transactions.</li>
+  <li>Features guaranteed vend sensing technology to ensure customers receive their products.</li>
+  <li>Extremely versatile and secure, making it ideal for outdoor use.</li>
+  <li>Recognized as one of the best-rated outdoor snack machines on the market.</li>
+</ul>
+<br> `
       },
       {
         id: "product7",
@@ -335,8 +378,20 @@
         image: "assets/images/32 Selection Snack candy VM.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p>If you are looking for a snack machine that's both affordable and flexible, the 32 Selection Snack and Candy Vending Machine is a great option. It's perfect for experienced vending operators and first-time owners alike, with a product display that's lit up by LED lights, built-in security measures, and high-quality construction. This snack and candy vending machine will satisfy your needs and provide you with years of dependable service. </p>
-         <p> With a total capacity of 400 items (160 snacks and pastries, and 240 candy and confections) offer your customers different selections of chips, candy, confections, and pastries. The pull-out tilt trays are designed to make loading a breeze. It features adjustable flex trays that can be easily configured to fit almost any package size, giving you more freedom for your snack selections.</p>`
+      <ul>
+  <li>The 32 Selection Snack and Candy Vending Machine is both affordable and flexible.</li>
+  <li>Ideal for experienced vending operators and first-time owners.</li>
+  <li>Features a product display lit up by LED lights for enhanced visibility.</li>
+  <li>Includes built-in security measures to protect products and machine components.</li>
+  <li>Constructed with high-quality materials to ensure years of dependable service.</li>
+  <li>Has a total capacity of 400 items, including 160 snacks and pastries and 240 candy and confections.</li>
+  <li>Offers customers a wide selection of chips, candy, confections, and pastries.</li>
+  <li>Pull-out tilt trays are designed to make loading products easy and efficient.</li>
+  <li>Features adjustable flex trays that can be configured to fit almost any package size.</li>
+  <li>Provides flexibility and freedom for snack and candy selections.</li>
+</ul>
+<br>
+`
 
       },
       {
@@ -346,9 +401,21 @@
         image: "assets/images/40 Selection snackcandy VM.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p> If you're looking for a large combo vending machine that is reasonably priced and versatile, the 40 Selection Snack and Candy Vending Machine is an excellent choice. It caters to seasoned vending experts and first-time owners. LED lights illuminate the product display, and the vending machine is constructed with top-notch materials and includes built-in security measures. With this vending machine, you can be confident that it will meet your and your customer’s needs and provide dependable service for years to come.</p>
-         <p> Offer your customers an array of snack options with our large combo vending machine that has a total capacity of 528 items (210 snacks and pastries, and 318 candy and confections). The pull-out tilt trays make loading effortless, while the adjustable flex trays provide flexibility to accommodate packages of various sizes. Choose from various chips, candy, confections, and pastries to customize your selection.
-</p>`
+       <ul>
+  <li>The 40 Selection Snack and Candy Vending Machine is reasonably priced and versatile.</li>
+  <li>An excellent choice for seasoned vending experts and first-time owners.</li>
+  <li>Features LED lights that illuminate the product display for better visibility.</li>
+  <li>Constructed with top-notch materials to ensure long-lasting performance.</li>
+  <li>Includes built-in security measures to protect products and the machine.</li>
+  <li>Designed to meet both your needs and your customer’s needs for dependable service.</li>
+  <li>Offers a total capacity of 528 items, including 210 snacks and pastries and 318 candy and confections.</li>
+  <li>Provides an array of snack options, including chips, candy, confections, and pastries.</li>
+  <li>Pull-out tilt trays make loading products effortless and convenient.</li>
+  <li>Adjustable flex trays provide flexibility to accommodate packages of various sizes.</li>
+  <li>Allows customization of your snack selection to suit customer preferences.</li>
+</ul>
+<br>
+`
       },
       {
         id: "product9",
@@ -357,20 +424,33 @@
         image: "assets/images/Frozen food icecream Vm.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p> Our 3-wide Frozen Food and Ice Cream Vending Machine delivers frozen foods including meals, sandwiches, ice cream, desserts and other frozen items in a compact footprint. It is equipped with state-of-the-art airflow technology to ensure items are kept at the ideal and correct temperature for optimum freshness, and this smart vending machine is Health Safety Compliant. The optional Two Separate Temperature Zone features ensure product temperature ranges of -15°F to 36°F enabling you to vend refrigerated & frozen foods from one machine. Purchase this frozen food vending machine today.</p>`
-
-      },
+     <ul>
+  <li>The 3-wide Frozen Food and Ice Cream Vending Machine delivers frozen foods including meals, sandwiches, ice cream, desserts and other frozen items
+   in compact footprint, making it space-efficient.</li>
+  <li>Equipped with state-of-the-art airflow technology to ensure items are kept at the ideal and correct temperature for optimum freshness.</li>
+  <li> This Smart vending machine is Health Safety Compliant.</li>
+  <>Optional Two Separate Temperature Zone feature ensures product temperature ranges from - to 36°F
+  Allows vending of both refrigerated and frozen foods from one machine.</li>
+</ul><br>
+`      },
       {
         id: "product10",
         name: "Cold Drink Elevator Vending Machine",
         // price: "$8838",
-        image: "assets/images/Colddrink elevatorVM.png",
+        image: "assets/images/colddrinkVm.jpg",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p> With the latest in vending technology and its sleek stylings, the Cold Drink Elevator Vending Machine offers features that cannot be found anywhere else on the market, including 36 unique cold drink selections and a total capacity of 216 beverages. This machine features a soft delivery elevator and a large delivery bin, allowing you to gently vend fragile and carbonated beverages of various product packaging sizes and shapes, such as boxed drinks and bottles. </p>
-         <p>Featuring a large merchandising window and enhanced LED lighting, the Cold Drink Elevator Machine health safety programmable by selection, range, or row. This vending machine is fully Americans with Disabilities Act (ADA) compliant and features an ergonomic user interface.  The Cold Drink Elevator Vending Machine includes iVend guaranteed product delivery. If a product does not vend correctly the first time, the customer will get their money back and try again for the same product or a completely new product. It comes standard with a two-line display that displays pricing information and nutritional information in compliance with the FDA’s Calorie Disclosure Rule. </p>`
-
-      },
+       <ul>
+  <li>The Cold Drink Elevator Vending Machine features the latest in vending technology and sleek styling.</li>
+  <li>It Offers 36 unique cold drink selections with a total capacity of 216 beverages.</li>
+  <li>Equipped with a soft delivery elevator and a large delivery bin to gently vend fragile and carbonated beverages.</li>
+  <li>Supports various product packaging sizes and shapes, including boxed drinks and bottles.</li>
+  <li>Features a large merchandising window with enhanced LED lighting for better product visibility.</li>
+ <li>Includes iVend guaranteed product delivery technology, ensuring customers get their product or their money back.</li>
+  <li>Comes with a two-line display that shows pricing and nutritional information in compliance with the FDA’s Calorie Disclosure Rule.</li>
+</ul><br>
+`
+ },
       {
         id: "product11",
         name: "Combination Elevator Vending Machine",
@@ -378,8 +458,20 @@
         image: "assets/images/Combination Elevator VM.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p>Elevate your customer experience with the versatile Snack and Drink Combination Elevator Vending Machine. It offers up to 28 product selections and has a total capacity of 149 items including (95) food items and (54) beverage items. This elevator vending machine features a soft product delivery elevator and a large delivery bin, allowing you to gently vend fragile cold food and beverages such as sandwiches, salads, and carbonated drinks with various product packing shapes and sizes.  </p>
-         <p>Equipped with the latest in vending technology and sleek styling, this elevator vending machine features a large merchandising window and enhanced LED lighting for maximum product visualization. It is health safety programmable by selection, range, or row. The Snack and Drink Combination Elevator Vending Machine is fully ADA compliant and features an ergonomic, user-friendly interface. With the Snack and Drink Combination Elevator Vending Machine, customers are guaranteed their chosen product thanks to the included feature, iVend. If an item fails to vend correctly on the first try, customers can either receive their money back or try again for the same or a different item. This machine also comes equipped with a two-line display that showcases pricing. </p>`
+       <ul>
+  <li>Elevate your customer experience with the versatile Snack and Drink Combination Elevator Vending Machine.</li>
+  <li>Offers up to 28 product selections.</li>
+  <li>Total capacity of 149 items, including 95 food items and 54 beverage items.</li>
+  <li>Features a soft product delivery elevator and a large delivery bin for gentle vending of fragile cold food and beverages such as sandwiches, salads, and carbonated drinks.</li>
+  <li>Accommodates various product packaging shapes and sizes.</li>
+  <li>Equipped with the latest in vending technology and sleek styling.</li>
+  <li>Includes a large merchandising window and enhanced LED lighting for maximum product visualization.</li>
+  <li>Health safety programmable by selection, range, or row.</li>
+  <li>Includes the iVend feature to guarantee product delivery. If an item fails to vend correctly on the first try, customers can receive their money back or try again for the same or a different item.</li>
+  <li>Comes equipped with a two-line display that showcases pricing.</li>
+</ul>
+<br>
+ </p>`
 
       },
       {
@@ -389,9 +481,17 @@
         image: "assets/images/SNACKANDCANDYvM.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p>Provide the ultimate vending experience, with this Snack and Candy Vending Machine, which blends cutting-edge technology with sleek styling. With 40 selections and a capacity of up to 630 items (226 snacks and pastries, and 404 candy and confections), this vending machine with optional card reader is perfect for those who want to offer a wide range of snacks and candy products to their customers.  </p>
-         <p> The glass front of the snack vending machine features an expansive merchandising window with LED lighting that offers superior merchandising of the products. Providing a clear view of the product and ensuring that they are displayed in the best possible way. In fact, the LED lighting is 100% brighter than most other snack machines on the market making it the perfect choice for anyone who wants to grab the attention of their customers.</p>
-         <p>The Snack and Candy Vending Machine is fully Americans with Disabilities Act (ADA) compliant. This means all usability components, including the machine’s ergonomic customer interface, payment systems, and delivery bin, are between 15” to 48” from the floor to ensure all customers can use your machine with ease. With iVend Guaranteed delivery system technology, you can ensure that your customers are always satisfied. If a snack does not vend correctly, they will receive a refund and can try again or choose a different snack to vend. </p>`
+        <ul>
+  <li>Provide the ultimate vending experience with the Snack and Candy Vending Machine, which blends cutting-edge technology with sleek styling.</li>
+  <li>Offers 40 selections and a capacity of up to 630 items, including 226 snacks and pastries and 404 candy and confections.</li>
+  <li>Optional card reader makes it perfect for offering a wide range of snacks and candy products to customers.</li>
+  <li>The glass front features an expansive merchandising window with LED lighting for superior product display.</li>
+  <li>LED lighting is 100% brighter than most other snack machines on the market, ensuring maximum customer attention.</li>
+  <li>Includes an ergonomic customer interface, payment systems, and delivery bin for ease of use.</li>
+  <li>Equipped with iVend Guaranteed delivery system technology to ensure customer satisfaction.</li>
+  <li>If a snack does not vend correctly, customers will receive a refund and can try again or choose a different snack.</li>
+</ul>
+<br>`
 
       },
       {
@@ -401,9 +501,18 @@
         image: "assets/images/cofee hotdrink VM.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p> The Coffee and Hot Drink Vending Machine features a European-design, state-of-the-art brewing system and filter system for precise ingredient controls to ensure a high-quality cup with superb taste, aroma, color and appearance is delivered each and every time. Choose from a variety of drink options, including regular coffee, decaf, espresso, cappuccino, café latte, hot chocolate, and tea. Customers can choose to add lightener (creamer) and/or sugar to their drinks. And if a customer just wants hot water, the hot beverage maker has that covered too.</p>
-         <p> This coffee and tea vending machine can hold up to 400 7oz. cups and accommodates cups with a lip diameter of up to 3.25”. Additionally, customers can use their own cup and the machine will automatically sense when they place it in the vending area. </p>
-         <p>This hot drink vending machine features an advanced brewing system and filtering technology that ensures a consistently high-quality drink without the need for filter paper. This coffee and tea dispensing machine also eco-friendly, thanks to its energy-saving power management system that automatically powers down during low-use periods. Plus, the machine features an automatic opening delivery door and an illuminated vend area, all while taking up minimal space. </p>`
+       <ul>
+  <li>The Coffee and Hot Drink Vending Machine features a European-design, state-of-the-art brewing and filter system for precise ingredient controls.</li>
+  <li>Delivers high-quality cups with superb taste, aroma, color, and appearance every time.</li>
+  <li>Offers a variety of drink options, including regular coffee, decaf, espresso, cappuccino, café latte, hot chocolate, and tea.</li>
+  <li>Customers can customize their drinks by adding lightener (creamer) and/or sugar, or opt for hot water only.</li>
+  <li>Holds up to 400 7oz. cups and accommodates cups with a lip diameter of up to 3.25”.</li>
+  <li>Allows customers to use their own cups, with the machine automatically sensing when a cup is placed in the vending area.</li>
+  <li>Features an advanced brewing system and filtering technology that ensures consistent high-quality drinks without the need for filter paper.</li>
+  <li>Eco-friendly with an energy-saving power management system that powers down during low-use periods.</li>
+  <li>Includes an automatic opening delivery door and an illuminated vend area, all while taking up minimal space.</li>
+</ul><br>
+`
 
       },
       {
@@ -413,9 +522,14 @@
         image: "assets/images/20 selction LaundryVM.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p>Do you own a Laundromat that could use a little extra profit? The Laundromat Laundry Supply Vending Machine can provide you with the extra cash flow you need without adding another employee to sell products from behind a counter. With the laundry soap vending machine, you can add profit to your laundromat 24/7 and without hiring staff members by vending detergents, fabric softeners, and laundry cleaning products. </p>
-         <p>With 35 selections available, the Laundromat Laundry Supply Vending Machine gives your customers the laundry cleaning products they need to do all the washing they have without having to go to the store to buy what they ran out of or just plain forgot. Pull-out tilt trays are adjustable to fit many shapes of laundry vending supplies. Great for effortless loading of the vending machine allowing the vendor operator to maintain product supplies easily. </p>
-         <p>The iVend® Guaranteed Delivery System provides built-in security, giving you peace of mind. Additionally, our Laundromat Laundry Supply Vending Machine offers your customers laundry detergent and other necessary products. Rest assured that your business is well-equipped with all the necessary tools to ensure customer satisfaction with our laundry detergent machine. </p>`
+       <ul>
+  <li>Provides extra profit for laundromats without hiring additional staff by vending detergents, fabric softeners, and other laundry cleaning products.</li>
+  <li>Allows laundromats to operate 24/7 and generate revenue from laundry-related products without the need for behind-the-counter sales.</li>
+  <li>Offers 35 selections of laundry cleaning products, giving customers what they need to complete their washing without going to the store.</li>
+  <li>Features adjustable pull-out tilt trays to fit various shapes of laundry vending supplies, making it easy to load and maintain.</li>
+  <li>Equipped with all the necessary tools to ensure customer satisfaction and easy product restocking for laundromat owners.</li>
+</ul><br>
+`
 
       },
       {
@@ -425,7 +539,13 @@
         image: "assets/images/CIGRATEVAPEvm.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p> Looking to increase your tobacco and vape product sales without the hassle of hiring additional staff? Our Cigarette and Vape Vending Machine is specially designed to offer ultimate convenience for customers looking to purchase cigarettes, cigars, chewing tobacco, lighters, vapes and vape cartridge refills. With our cigarette vending machine, you can rest easy knowing that your cigarette and vape product shrinkage is a thing of the past as it offers maximum security. </p>`
+        <ul>
+  <li>Designed to increase tobacco and vape product sales without the need to hire additional staff.</li>
+  <li>Offers ultimate convenience for customers purchasing cigarettes, cigars, chewing tobacco, lighters, vapes, and vape cartridge refills.</li>
+  <li>Ensures maximum security, reducing product shrinkage and providing peace of mind for operators.</li>
+</ul>
+<br>
+`
 
       },
       {
@@ -435,8 +555,15 @@
         image: "assets/images/SelfstorageVm.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p> The Self Storage Supply Vending Machine provides you with a new profit center for your self storage facility by providing best-selling self storage and packaging products, as well as cold drinks to customers 24/7.  The outdoor-rated Self Storage Supply Vending Machine features maximum durability to withstand the elements and includes the latest in vending technology. It features a robust Weather and High Security Package that includes rain guards and sealing of sensitive areas, vandal-resistant panels over access areas, and an impact-resistant polycarbonate window cover with a steel frame. This gives you the peace of mind you need to place your merchandisers outdoors and in other climate-demanding places.  This supply vending machine also includes an alarm that sounds when the machine is tipped or the door opened without authorization.</p>
-         <p> With 31 selections, this is the perfect merchandiser for any self-storage location. The Self Storage Supply Vending Machine is capable of vending products with various package sizes and types, allowing you to provide your customers with convenient, 24/7 access to in-demand self storage supplies such as packaging tape, padlocks, weather locks, gloves and cutters, labeling, bubble wrap, furniture covers, furniture protection, tarps and tie downs, moisture absorbents and more.  The machine is also refrigerated / temperature controlled to protect your products from extreme temperatures while also enabling you to vend cold drinks. </p>`
+        <ul>
+  <li>Provides a new profit center for self-storage facilities by offering self-storage products and cold drinks 24/7.</li>
+  <li>Outdoor-rated with maximum durability to withstand the elements, featuring a Weather and High Security Package including
+     rain guards, vandal-resistant panels, and an impact-resistant polycarbonate window cover with a steel frame.</li>
+  <li>Includes an alarm that activates when the machine is tipped or the door is opened without authorization.</li>
+  <li>Offers 31 selections, including packaging tape, padlocks, weather locks, gloves, bubble wrap, furniture covers, and cold drinks.</li>
+  <li>Refrigerated/temperature controlled to protect products from extreme temperatures while enabling the vending of cold drinks.</li>
+</ul><br>
+`
 
       },
      
@@ -447,7 +574,14 @@
         image: "assets/images/bowlinggearVM.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p>The Bowling Gear Vending Machine caters to the needs of bowlers and offers a variety of bowling accessories that are available for purchase 24/7, without the hassle of having to wait in long lines at the counter. This innovative bowling vending machine enables you to provide your customers with everything they need to play their perfect game, including socks, towels, cleaning sprays, and much more. It's the perfect solution for accommodating the needs of your customers, without having to hire additional staff. Simply place this sock vending machine in a high-traffic area in your bowling center and watch the sales roll in! </p>`
+      <ul>
+  <li>Caters to the needs of bowlers by offering a variety of bowling accessories available 24/7.</li>
+  <li>Eliminates the need for waiting in long lines at the counter, providing convenience for customers.</li>
+  <li>Offers a range of products, including socks, towels, cleaning sprays, and more, ensuring everything needed to play the perfect game.</li>
+  <li>Perfect solution for accommodating customer needs without hiring additional staff.</li>
+  <li>Can be placed in high-traffic areas within your bowling center to maximize sales.</li>
+</ul><br>
+`
 
       },
       {
@@ -457,8 +591,14 @@
         image: "assets/images/Safety Supply ppe VM.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p> Offer safe and easy access to personal protection equipment (PPE), safety products, medical supplies, and disinfecting supplies with the Safety Supply and and PPE Vending Machine. This cashless-only machine offers a seamless, humanless transaction allowing consumers to access the essential PPE and safety products they need through a contactless payment experience and without having to wait in a checkout line or interact with a cashier. </p>
-         <p> Technology makes the high-touch surfaces of vending machines safer by quickly killing or inactivating up to 99.9% of common viruses and bacteria, including influenza and the COVID-19 virus.  With the Safety Supply and PPE Vending Machine you can vend a variety of popular safety products and medical supplies including disinfectant wipes, latex gloves, medical masks, kleenex, bandaids, hand sanitizer, and other PPE supplies. </p>`
+       <ul>
+  <li>Provides safe and easy access to personal protection equipment (PPE), safety products, medical supplies, and disinfecting supplies.</li>
+  <li>Cashless-only machine allows for seamless, humanless transactions with a contactless payment experience.</li>
+  <li>Eliminates the need for customers to wait in checkout lines or interact with a cashier.</li>
+  <li>Technology helps make high-touch surfaces safer by killing or inactivating up to 99.9% of common viruses and bacteria, including influenza and COVID-19.</li>
+  <li>Vends a variety of popular safety products and medical supplies, including disinfectant wipes, latex gloves, medical masks, kleenex, bandaids, hand sanitizer, and other PPE supplies.</li>
+</ul><br>
+`
 
       },
       {
@@ -468,10 +608,16 @@
         image: "assets/images/SB16 singlebrew VM.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p> The SB16 Single Brew Coffee Pod vending machine is a perfect solution for organizing, securing, and managing single-serve coffee and tea pods, including K-Cups. It provides 16 individual selections and can hold up to 256 pods. Its countertop design makes it easy to fit into breakroom kitchen areas, maximizing space efficiency without compromising functionality. The bill acceptor makes it convenient and efficient for users to purchase their desired tea and coffee pods quickly.</p>
-         <p>Designed with built-in security measures and anti-cheat mechanisms, this K-Cup vending machine ensures that your single-serve tea and coffee pods inventory remains intact and tamper-free. When K-cups are left out in a basket, they tend to run out quickly and disappear due to misplacement, overconsumption, and misuse, which is extremely costly. Say goodbye to unnecessary costs and misplaced or disappearing inventory—the SB16 Single Brew Coffee Pod vending machine ensures that K-cups stay put, preventing unauthorized removal and promoting responsible consumption. </p>
-         <p> Ensure your employees stay energized, productive, and happy by providing easy access to their favorite coffee and tea blends while keeping inventory secure and eliminating unnecessary costs. Order the SB16 K-Cup vending machine today!</p>
-         <p> K-Cup is a registered trademark of Keurig Green Mountain, Inc. There is no affiliation between U-Select-It and Keurig Green Mountain, Inc.</p>`
+        <ul>
+  <li>The SB16 Single Brew Coffee Pod vending machine organizes, secures, and manages single-serve coffee and tea pods, including K-Cups.</li>
+  <li>Offers 16 individual selections and holds up to 256 pods, with a countertop design that maximizes space efficiency in breakroom kitchen areas.</li>
+  <li>Includes a bill acceptor for quick and efficient purchases of tea and coffee pods.</li>
+  <li>Features built-in security measures and anti-cheat mechanisms to protect inventory from unauthorized removal and ensure tamper-free storage.</li>
+  <li>Prevents unnecessary costs and inventory loss from misplaced or overconsumed K-Cups by keeping them securely in place.</li>
+  <li>Promotes responsible consumption while ensuring employees have easy access to their favorite coffee and tea blends, keeping them energized and productive.</li>
+  <li>K-Cup is a registered trademark of Keurig Green Mountain, Inc., and there is no affiliation between U-Select-It and Keurig Green Mountain, Inc.</li>
+</ul><br>
+`
 
       },
       {
@@ -481,9 +627,16 @@
         image: "assets/images/triplegumballcandyVM.png",
         description: `  <p>The Top-Notch Las Vegas Vending Experience</p>
          <p><strong>Product Details</strong></p>
-         <p> Provide your customers with a variety of candy and gumball selections with the Triple Vend Gumball/Candy Machine. This triple vend machine gives your customers quick and easy access to the candy they crave at a reasonable price. The Triple Vend Gumball/Candy Machine features an all-metal triple head with a red and black cast iron stand. It vends candy and/or capsules in the outside two compartments and 1” gumballs in the middle compartment.</p>
-         <p> This triple vend candy machine with a stand features an all-metal construction complete with a shatter-resistant display. Of the three wheels on this gumball vending machine, one is dedicated to dispensing capsules and gumballs while the other two can be used for dispensing candy. The dispensing ratio for the various types of candies from this bubble gum machine can be set up before you begin using it. The coin vending machine can be operated only with the use of quarters and can hold up to 45 lbs of candy and gumballs. It's mounted atop a cast-iron stand that has an 18" base. This coin-operated gumball machine is best suited for dispensing candies like Skittles, M&Ms and gumballs.</p>
-         <p> The Triple Vend Gumball/Candy Machine is the perfect addition for any location, as it does not take up an abundance of space. This gumball machine is designed for use in indoor commercial spaces, such as small retail stores or outside of a supermarket. You can also place one on school or college premises for use by the students. Kids especially enjoy operating these candy dispenser machines and receiving the sweet treats that come out of it. This gumball machine can help you add to your daily business income without having to invest a great deal into its installation.</p>`
+       <ul>
+  <li>Provides a variety of candy and gumball selections with the Triple Vend Gumball/Candy Machine, offering quick and easy access to treats at a reasonable price.</li>
+  <li>Features an all-metal triple head with a red and black cast iron stand, vending candy or capsules in the outside two compartments and 1” gumballs in the middle compartment.</li>
+  <li>Constructed with shatter-resistant display, ensuring durability and reliability for long-term use.</li>
+  <li>One of the three wheels dispenses capsules and gumballs, while the other two dispense candy. The dispensing ratio can be set before use.</li>
+  <li>Operates with quarters and holds up to 45 lbs of candy and gumballs, making it ideal for use in small spaces.</li>
+  <li>Mounted on a cast-iron stand with an 18" base, this machine is designed for indoor commercial spaces, such as small retail stores or supermarkets.</li>
+  <li>Can also be placed in school or college premises for students to enjoy, helping increase daily business income without significant installation costs.</li>
+</ul><br>
+`
 
       },
     ];

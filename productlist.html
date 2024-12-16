@@ -37,31 +37,25 @@
       <div class="navbar-container">
         <!-- Logo -->
         <a href="#" class="navbar-logo">
-          <img src="assets/images/IMG_1.png" alt="Company Logo" class="navbar-logo-img" />
+          <img
+            src="assets/images/IMG_1.png"
+            alt="Company Logo"
+            class="navbar-logo-img"
+          />
         </a>
-  
+
         <!-- Hamburger Menu -->
         <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
           ☰
         </button>
-  
+
         <!-- Navbar Links -->
         <ul class="navbar-menu" id="navbar-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li class="dropdown" id="dropdown">
-            <a href="productlist.html" class="dropdown-toggle">All Products ▼</a> <!-- Direct link to productlist.html -->
-            <ul class="dropdown-menu">
-              <!-- <li><a href="productlist.html">All Products List</a></li> -->
-              <li><a href="combinationVM.html">Combination Vending Machine</a></li>
-              <li><a href="colddrinkVM.html">Cold Drink Vending Machine</a></li>
-              <li><a href="snack&candyVM.html">Snack & Candy Vending Machine</a></li>
-              <li><a href="hotdrinkcoffe.html">Hot Drink / Coffee Vending Machine</a></li>
-              <li><a href="retail-nonfooddrink.html">Retail (Non-Food / Drink) Vending Machine</a></li>
-            </ul>
-          </li>
-       
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="productlist.html">All Products</a></li>
+<li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -95,9 +89,9 @@
     <!-- Contact Information Section -->
     <div class="footer-contact">
       <h3 class="footer-heading">Contact Us</h3>
-      <p>4985 N chieftain st</p>
-      <p>Email: lasvegasvending.net</p>
-      <p>Phone: 702-862-6159</p>
+      <p>Email: <a href="mailto:Blanca@lasvegasvending.net">Blanca@lasvegasvending.net</a></p>
+      <p>Phone: <a href="tel:+17028626159">702-862-6159</a></p>
+      
 
       <!-- Social Icons -->
       <div class="footer-social">
@@ -122,11 +116,12 @@
     <p>&copy; 2024 Las Vegas Vending LLC. All Rights Reserved.</p>
   </div>
 </footer>
+<!-- sript -->
   <script>
     const products = [
       {
         id: "product1",
-        name: "Futura Snack & Drink Combination",
+        name: "Snack & Drink Combination",
         // price: "$6084",
         image: "assets/images/futura snack and drink vm.png",
       },
@@ -182,7 +177,7 @@
         id: "product10",
         name: "Cold Drink Elevator Vending Machine",
         // price: "$8838",
-        image: "assets/images/Colddrink elevatorVM.png",
+        image: "assets/images/colddrinkVm.jpg",
       },
       {
         id: "product11",
@@ -259,7 +254,7 @@
       productCard.innerHTML = `
         <img src="${product.image}" alt="${product.name}" class="product-image">
         <h3 class="product-name">${product.name}</h3>
-        <p class="product-price">${product.price}</p>
+       
         <a href="product-details.html?id=${product.id}" class="view-details">View Details</a>
       `;
 

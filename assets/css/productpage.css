@@ -436,6 +436,11 @@ body {
   margin: 5px 0;
 }
 
+.footer-contact p a{
+  margin: 5px 0;
+  text-decoration: none;
+  color: #414042;
+}
 .footer-social {
   margin-top: 15px;
 }
