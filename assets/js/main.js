@@ -1,160 +1,88 @@
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbarMenu = document.getElementById('navbar-menu');
-    const dropdown = document.getElementById('dropdown');
-    const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-    
-    // Toggle menu open/close for mobile screens
-    menuToggle.addEventListener('click', () => {
-      navbarMenu.classList.toggle('active');
-      menuToggle.textContent = navbarMenu.classList.contains('active') ? '✖' : '☰'; // Toggle icon
-    });
-    
-    // Show dropdown on hover (for desktop screens)
-    dropdown.addEventListener('mouseover', () => {
-      dropdownMenu.style.display = 'block'; // Show the dropdown menu
-    });
-    
-    dropdown.addEventListener('mouseout', () => {
-      dropdownMenu.style.display = 'none'; // Hide the dropdown menu when mouse leaves
-    });
-    
-    // Close menu when a link is clicked (for mobile screens)
-    navbarMenu.addEventListener('click', (event) => {
-      if (event.target.tagName === 'A' && !event.target.classList.contains('dropdown-toggle')) {
-        navbarMenu.classList.remove('active');
-        menuToggle.textContent = '☰'; // Reset to hamburger icon
-      }
-    });
-    
-    // Handle the click on "All Products" link (navigates to productlist.html)
-    dropdownToggle.addEventListener('click', (event) => {
-      event.preventDefault(); // Prevent default link behavior
-      window.location.href = 'productlist.html'; // Navigate to the product list page
-    });
-    
-    // Optionally, you can add an event listener to open/close dropdown for smaller screens (when clicked)
-    dropdownToggle.addEventListener('click', (event) => {
-      event.preventDefault();
-      dropdown.classList.toggle('active');
-      if (dropdown.classList.contains('active')) {
-        dropdownMenu.style.display = 'block'; // Show the dropdown
-      } else {
-        dropdownMenu.style.display = 'none'; // Hide the dropdown
-      }
-    });
+    // // Mobile menu toggle
 
+    // Menu toggle for mobile screens
+const menuToggle = document.getElementById('menu-toggle');
+const navbarMenu = document.getElementById('navbar-menu');
 
-    // // FEATURED PRODUCT SLIDER
+// Toggle menu open/close
+menuToggle.addEventListener('click', () => {
+  navbarMenu.classList.toggle('active');
+  menuToggle.textContent = navbarMenu.classList.contains('active') ? '✖' : '☰'; // Toggle icon
+});
+
+// Close menu when a link is clicked (for mobile screens)
+navbarMenu.addEventListener('click', (event) => {
+  if (event.target.tagName === 'A') {
+    navbarMenu.classList.remove('active');
+    menuToggle.textContent = '☰'; // Reset to hamburger icon
+  }
+});
+
+  // FEATURED PRODUCT SLIDER
+  const sliderItems = document.querySelector('.slider-items');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
   
-    // const sliderItems = document.querySelector('.slider-items');
-    //     const prevBtn = document.querySelector('.prev-btn');
-    //     const nextBtn = document.querySelector('.next-btn');
+  let currentIndex = 1; // Start from the first actual item
+  const totalItems = sliderItems.children.length;
+  
+  // Clone the first and last elements for looping
+  const cloneStart = sliderItems.children[0].cloneNode(true);
+  const cloneEnd = sliderItems.children[totalItems - 1].cloneNode(true);
+  
+  sliderItems.appendChild(cloneStart); // Add a clone of the first item at the end
+  sliderItems.insertBefore(cloneEnd, sliderItems.firstChild); // Add a clone of the last item at the beginning
+  
+  const slideWidth = sliderItems.children[0].clientWidth;
+  
+  // Adjust initial position to show the first actual item
+  sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  
+  // Function to update the slider's position
+  const updateSlider = () => {
+    sliderItems.style.transition = 'transform 0.5s ease-in-out';
+    sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  };
+  
+  // Handle "Next" button click
+  nextBtn.addEventListener('click', () => {
+    currentIndex++;
+    updateSlider();
+  
+    // Reset to the first item when reaching the clone of the first item
+    if (currentIndex === totalItems - 1) {
+      setTimeout(() => {
+        sliderItems.style.transition = 'none';
+        currentIndex = 1; // Jump back to the first actual item
+        sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }, 500); // Matches the transition duration
+    }
+  });
+  
+  // Handle "Previous" button click
+  prevBtn.addEventListener('click', () => {
+    currentIndex--;
+    updateSlider();
+  
+    // Reset to the last item when reaching the clone of the last item
+    if (currentIndex === 0) {
+      setTimeout(() => {
+        sliderItems.style.transition = 'none';
+        currentIndex = totalItems - 2; // Jump back to the last actual item
+        sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }, 500); // Matches the transition duration
+    }
+  });
+  
+  // Adjust the slider on window resize
+  window.addEventListener('resize', () => {
+    const newSlideWidth = sliderItems.children[0].clientWidth;
+    sliderItems.style.transition = 'none'; // Temporarily disable transitions
+    sliderItems.style.transform = `translateX(-${currentIndex * newSlideWidth}px)`;
+  });
 
-    //     let currentIndex = 1;
-    //     const totalItems = sliderItems.children.length;
 
-    //     const cloneStart = sliderItems.children[0].cloneNode(true);
-    //     const cloneEnd = sliderItems.children[totalItems - 1].cloneNode(true);
-
-    //     sliderItems.appendChild(cloneStart);
-    //     sliderItems.insertBefore(cloneEnd, sliderItems.firstChild);
-
-    //     const slideWidth = sliderItems.children[0].clientWidth;
-    //     sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-
-    //     const updateSlider = () => {
-    //         sliderItems.style.transition = 'transform 0.5s ease-in-out';
-    //         sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    //     };
-
-    //     nextBtn.addEventListener('click', () => {
-    //         currentIndex++;
-    //         updateSlider();
-    //         if (currentIndex >= totalItems) {
-    //             setTimeout(() => {
-    //                 sliderItems.style.transition = 'none';
-    //                 currentIndex = 1;
-    //                 sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    //             }, 500);
-    //         }
-    //     });
-
-    //     prevBtn.addEventListener('click', () => {
-    //         currentIndex--;
-    //         updateSlider();
-    //         if (currentIndex < 0) {
-    //             setTimeout(() => {
-    //                 sliderItems.style.transition = 'none';
-    //                 currentIndex = totalItems - 2;
-    //                 sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    //             }, 500);
-    //         }
-    //     });
-
- // FEATURED PRODUCT SLIDER
- const sliderItems = document.querySelector('.slider-items');
- const prevBtn = document.querySelector('.prev-btn');
- const nextBtn = document.querySelector('.next-btn');
- 
- let currentIndex = 1; // Start from the first actual item
- const totalItems = sliderItems.children.length;
- 
- // Clone the first and last elements for looping
- const cloneStart = sliderItems.children[0].cloneNode(true);
- const cloneEnd = sliderItems.children[totalItems - 1].cloneNode(true);
- 
- sliderItems.appendChild(cloneStart); // Add a clone of the first item at the end
- sliderItems.insertBefore(cloneEnd, sliderItems.firstChild); // Add a clone of the last item at the beginning
- 
- const slideWidth = sliderItems.children[0].clientWidth;
- 
- // Adjust initial position to show the first actual item
- sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
- 
- // Function to update the slider's position
- const updateSlider = () => {
-   sliderItems.style.transition = 'transform 0.5s ease-in-out';
-   sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
- };
- 
- // Handle "Next" button click
- nextBtn.addEventListener('click', () => {
-   currentIndex++;
-   updateSlider();
- 
-   // Reset to the first item when reaching the clone of the first item
-   if (currentIndex === totalItems - 1) {
-     setTimeout(() => {
-       sliderItems.style.transition = 'none';
-       currentIndex = 1; // Jump back to the first actual item
-       sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-     }, 500); // Matches the transition duration
-   }
- });
- 
- // Handle "Previous" button click
- prevBtn.addEventListener('click', () => {
-   currentIndex--;
-   updateSlider();
- 
-   // Reset to the last item when reaching the clone of the last item
-   if (currentIndex === 0) {
-     setTimeout(() => {
-       sliderItems.style.transition = 'none';
-       currentIndex = totalItems - 2; // Jump back to the last actual item
-       sliderItems.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-     }, 500); // Matches the transition duration
-   }
- });
- 
- // Adjust the slider on window resize
- window.addEventListener('resize', () => {
-   const newSlideWidth = sliderItems.children[0].clientWidth;
-   sliderItems.style.transition = 'none'; // Temporarily disable transitions
-   sliderItems.style.transform = `translateX(-${currentIndex * newSlideWidth}px)`;
- });
+  
  
         // contact form
 
